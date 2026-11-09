@@ -1,0 +1,31 @@
+ArkFlow
+Copyright 2026 深圳依时货拉拉科技有限公司
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file in the project root.
+
+Apache-2.0 covers original ArkFlow material in this repository, including
+the three Agent Skills (SKILL.md and quality-gate scripts), the extra
+conventions template, and the in-repo indexes under
+skills/arkts-style-core/references/.
+
+Third-party documentation (not redistributed)
+---------------------------------------------
+This repository does not include DevEco Studio, CodeGenie, or other Huawei
+product materials (built-in AI rules, bundled development handbooks, or
+similar extracts).
+
+ArkTS compiler constraints and HarmonyOS API / ArkUI guidance are not
+authored as original ArkFlow content. Agents must open the official
+documents listed in:
+
+  skills/arkts-style-core/references/arkts-basic-rules.md
+  skills/arkts-style-core/references/arkts-basic-guide.md
+
+Those official texts remain under their own terms, for example:
+
+- OpenHarmony Documentation (Creative Commons Attribution 4.0):
+  https://gitee.com/openharmony/docs
+  https://github.com/openharmony/docs
+- HarmonyOS developer documentation on developer.huawei.com
+  (Huawei terms; this repo only links, it does not copy the body text)

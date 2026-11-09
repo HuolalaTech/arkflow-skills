@@ -1,0 +1,50 @@
+// baseline-code-linter.json5 — 内置基线配置（保守规则集）
+//
+// 优先级说明：项目 code-linter.json5 中同名字段会覆盖或合并此基线（见合并脚本）。
+//
+// ⚠️  @security/* 规则默认均为 "error"，适合安全要求较高场景。
+//     若接入初期噪音过多，可在项目 code-linter.json5 中按需降级，例如：
+//       "rules": { "@security/no-unsafe-mac": "warn" }
+//     若需完全关闭某条规则：
+//       "rules": { "@security/no-unsafe-3des": "off" }
+//
+// ⚠️  ruleSet 采用并集合并，如需排除某规则集，从项目配置的 ruleSet 中省略即可。
+//
+{
+    "files": [
+      "**/*.ets"
+    ],
+    "ignore": [
+      "**/src/ohosTest/**/*",
+      "**/src/test/**/*",
+      "**/src/mock/**/*",
+      "**/node_modules/**/*",
+      "**/oh_modules/**/*",
+      "**/build/**/*",
+      "**/.preview/**/*",
+      "**/generated/**/*",
+      "**/*.d.ts"
+    ],
+    "ruleSet": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@performance/recommended"     
+    ],
+    "rules": {
+      "@security/no-cycle": "error",
+      "@security/no-unsafe-aes": "error",            
+      "@security/no-unsafe-dh": "error",
+      "@security/no-unsafe-dh-key": "error",
+      "@security/no-unsafe-dsa": "error",
+      "@security/no-unsafe-dsa-key": "error",
+      "@security/no-unsafe-ecdsa": "error",
+      "@security/no-unsafe-hash": "error",
+      "@security/no-unsafe-mac": "warn",
+      "@security/no-unsafe-rsa-encrypt": "error",      
+      "@security/no-unsafe-rsa-key": "error",
+      "@security/no-unsafe-rsa-sign": "error",
+      "@security/no-unsafe-3des": "error",
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "@typescript-eslint/unbound-method": "error",
+      "@performance/high-frequency-log-check": "warn"
+    }
+  }
